@@ -1,0 +1,26 @@
+@use 'main';
+
+#content {
+    @include main.content;
+    background-color: main.$background-light;
+    padding-left: 30px;
+    padding-right: 100px;
+    height: 150%;
+
+    h1 {
+        color: main.$highlight;
+    }
+
+    #info {
+        p {
+            margin-bottom: 10px;
+        }
+
+        .subinfo {
+            color: main.$subinfo-color;
+            font-size: 70%;
+            margin-top: 0;
+            margin-left: 150px;
+        }
+    }
+}

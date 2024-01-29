@@ -1,0 +1,164 @@
+body {
+  font-family: "JetBrains Mono", serif;
+  font-size: 150%;
+  color: #ddd;
+  background-color: #222;
+}
+
+#side-panel {
+  position: fixed;
+  width: 211px;
+  align-self: flex-end;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+}
+#side-panel #side-nav a {
+  text-decoration: none;
+  color: #ffd195;
+  display: flex;
+}
+#side-panel #version-text {
+  font-size: 60%;
+  position: fixed;
+  bottom: 5px;
+}
+
+#top-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 211px;
+  bottom: 835px;
+  display: flex;
+  z-index: 100;
+  background-color: #222;
+}
+#top-panel p {
+  font-size: 75%;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #ddd;
+  text-decoration: none;
+}
+#top-panel a {
+  text-decoration: none;
+}
+#top-panel .separator {
+  color: #e68f42;
+}
+
+.material-symbols-rounded {
+  margin-right: 20px;
+  margin-top: 27px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+#content {
+  position: absolute;
+  left: 211px;
+  bottom: 0;
+  right: 0;
+  top: 77px;
+  background-color: #333;
+  padding-left: 30px;
+}
+#content #head {
+  padding-left: 30px;
+  color: #e68f42;
+}
+#content p {
+  font-size: 90%;
+}
+#content #labels {
+  position: absolute;
+  height: 80%;
+  width: 400px;
+  cursor: default;
+}
+#content #values {
+  position: absolute;
+  top: 145px;
+  left: 450px;
+  height: 80%;
+  width: 200px;
+}
+#content #values input {
+  background-color: #333;
+  border: none;
+  height: 30px;
+  margin-bottom: 20px;
+  font-family: "JetBrains Mono", serif;
+  color: #ddd;
+  font-size: 100%;
+  width: 180px;
+}
+#content #values input:focus {
+  outline: none;
+}
+#content #values input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#content #arrows {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#content #arrows #add {
+  position: absolute;
+  width: 20px;
+  left: 650px;
+}
+#content #arrows #add a {
+  margin: 21px;
+}
+#content #arrows #add a span {
+  margin-top: 21px;
+}
+#content #arrows #add a {
+  color: rgb(120, 255, 120);
+}
+#content #arrows #sub {
+  position: absolute;
+  width: 20px;
+  left: 680px;
+}
+#content #arrows #sub a {
+  margin: 21px;
+}
+#content #arrows #sub a span {
+  margin-top: 21px;
+}
+#content #arrows #sub a {
+  color: #ff8484;
+}
+#content #arrows #add-2 {
+  position: absolute;
+  width: 20px;
+  left: 750px;
+}
+#content #arrows #add-2 a {
+  margin: 21px;
+}
+#content #arrows #add-2 a span {
+  margin-top: 21px;
+}
+#content #arrows #add-2 a {
+  color: rgb(120, 255, 120);
+}
+#content #arrows #sub-2 {
+  position: absolute;
+  width: 20px;
+  left: 780px;
+}
+#content #arrows #sub-2 a {
+  margin: 21px;
+}
+#content #arrows #sub-2 a span {
+  margin-top: 21px;
+}
+#content #arrows #sub-2 a {
+  color: #ff8484;
+}/*# sourceMappingURL=settings.css.map */

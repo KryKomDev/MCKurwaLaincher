@@ -1,0 +1,102 @@
+@use 'main';
+
+@mixin arrows {
+    position: absolute;
+    width: 20px;
+
+    a {
+        margin: 21px;
+
+        span {
+            margin-top: 21px;
+        }
+    }
+}
+
+#content {
+    @include main.content;
+    background-color: main.$background-light;
+
+    padding-left: 30px;
+
+    #head {
+        padding-left: 30px;
+        color: main.$highlight;
+    }
+
+    p {
+        font-size: 90%;
+    }
+
+    #labels {
+        position: absolute;
+        height: 80%;
+        width: 400px;
+        cursor: default;
+    }
+
+    #values {
+        position: absolute;
+        top: 145px;
+        left: 450px;
+        height: 80%;
+        width: 200px;
+
+        input {
+            background-color: main.$background-light;
+            border: none;
+            height: 30px;
+            margin-bottom: 20px;
+            font-family: "JetBrains Mono", serif;
+            color: main.$font-color;
+            font-size: 100%;
+            width: 180px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    #arrows {
+        cursor: pointer;
+        user-select: none;
+
+        #add {
+            @include arrows();
+            left: 650px;
+
+            a {
+                color: main.$add-color;
+            }
+        }
+
+        #sub {
+            @include arrows();
+            left: 680px;
+            a {
+                color: main.$sub-color;
+            }
+        }
+
+        #add-2 {
+            @include arrows();
+            left: 750px;
+            a {
+                color: main.$add-color;
+            }
+        }
+
+        #sub-2 {
+            @include arrows();
+            left: 780px;
+            a {
+                color: main.$sub-color;
+            }
+        }
+    }
+}

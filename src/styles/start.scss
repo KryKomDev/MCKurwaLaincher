@@ -1,0 +1,38 @@
+@use 'main';
+
+#content {
+    @include main.content;
+    background-image: url("../photos/start photo 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        position: absolute;
+        left: 39%;
+        font-size: 300%;
+    }
+
+    #start-panel {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 92%;
+        background-color: main.$background;
+
+        #start-button {
+            position: absolute;
+            left: 40%;
+            bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: main.$background;
+            border: 7px solid main.$highlight;
+            cursor: pointer;
+
+            p {
+                margin: 10px 50px;
+            }
+        }
+    }
+}

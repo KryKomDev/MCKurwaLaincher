@@ -1,0 +1,85 @@
+$background: #222;
+$background-light: #333;
+$highlight: #e68f42;
+$link-color: #ffd195;
+$font-color: #ddd;
+$add-color: rgb(120, 255, 120);
+$sub-color: #ff8484;
+$subinfo-color: #999;
+
+@mixin content {
+    position: absolute;
+    left: 211px;
+    bottom: 0;
+    right: 0;
+    top: 77px;
+}
+
+body {
+    font-family: "JetBrains Mono", serif;
+    font-size: 150%;
+    color: $font-color;
+    background-color: $background;
+}
+
+#side-panel {
+    position: fixed;
+    width: 211px;
+    align-self: flex-end;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+
+    #side-nav {
+        a {
+            text-decoration: none;
+            color: $link-color;
+            display: flex;
+        }
+    }
+
+    #version-text {
+        font-size: 60%;
+        position: fixed;
+        bottom: 5px;
+    }
+}
+
+#top-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 211px;
+    bottom: 835px;
+    display: flex;
+    z-index: 100;
+    background-color: $background;
+
+    p {
+        font-size: 75%;
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-right: 30px;
+        color: $font-color;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .separator {
+        color: $highlight;
+    }
+}
+
+.material-symbols-rounded {
+    margin-right: 20px;
+    margin-top: 27px;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
