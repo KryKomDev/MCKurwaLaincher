@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 <div id="side-panel">
     <p>MC KURWA V1</p>
 
@@ -30,7 +31,7 @@
     <a href="terrain.html"><p>Terrain</p></a>
     <a href="water.html"><p>Water</p></a>
     <a href="plants.html"><p>Plants</p></a>
-    <a href="gameplay.html"><p>Rendering</p></a>
+    <a href="rendering.html"><p>Rendering</p></a>
     <a href="movement.html"><p>Movement control</p></a>
 </div>
 
@@ -45,10 +46,10 @@
     </div>
 
     <div id="values">
-        <input type="number" value="500" onchange="setValueById('windowWidth', parseInt(document.getElementById('windowWidth').value));" id="windowWidth">
-        <input type="number" value="500" onchange="setValueById('windowHeight', parseInt(document.getElementById('windowHeight').value));" id="windowHeight">
-        <input type="number" value="500" onchange="setValueById('fieldOfView', parseInt(document.getElementById('fieldOfView').value));" id="fieldOfView">
-        <input type="number" value="500" onchange="setValueById('renderDistance', parseInt(document.getElementById('renderDistance').value));" id="renderDistance">
+        <input type="number" onchange="setValueById('windowWidth', parseInt(document.getElementById('windowWidth').value));" id="windowWidth">
+        <input type="number" onchange="setValueById('windowHeight', parseInt(document.getElementById('windowHeight').value));" id="windowHeight">
+        <input type="number" onchange="setValueById('fieldOfView', parseInt(document.getElementById('fieldOfView').value));" id="fieldOfView">
+        <input type="number" onchange="setValueById('renderDistance', parseInt(document.getElementById('renderDistance').value));" id="renderDistance">
     </div>
 
     <div id="arrows">
@@ -79,7 +80,19 @@
             <a onclick="add('fieldOfView', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
             <a onclick="add('renderDistance', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
         </div>
+
+        <div id="reset">
+            <a onclick="reset('windowWidth')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('windowHeight')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('fieldOfView')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('renderDistance')"><span class="material-symbols-rounded">refresh</span></a>
+        </div>
     </div>
 </div>
+
+<script>
+    loadSettings();
+</script>
+
 </body>
 </html>

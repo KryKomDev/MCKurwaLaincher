@@ -15,6 +15,8 @@ const createWindow = () => {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js'),
     },
+    resizable: false,
+    icon: '/icons/tab-icon.png',
   });
 
   // and load the index.html of the app.

@@ -44,9 +44,9 @@
     </div>
 
     <div id="values">
-        <input type="number" value="500" onchange="setValueById('worldSize', parseInt(document.getElementById('worldSize').value));" id="worldSize">
-        <input type="number" value="250" onchange="setValueById('heightLimit', parseInt(document.getElementById('heightLimit').value));" id="heightLimit">
-        <input type="number" value="1" onchange="setValueById('seed', parseInt(document.getElementById('seed').value));" id="seed">
+        <input type="number" onchange="setValueById('worldSize', parseInt(document.getElementById('worldSize').value));" id="worldSize">
+        <input type="number" onchange="setValueById('heightLimit', parseInt(document.getElementById('heightLimit').value));" id="heightLimit">
+        <input type="number" onchange="setValueById('seed', parseInt(document.getElementById('seed').value));" id="seed">
     </div>
 
     <div id="arrows">
@@ -73,7 +73,18 @@
             <a onclick="add('heightLimit', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
             <a onclick="add('seed', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
         </div>
+
+        <div id="reset">
+            <a onclick="reset('worldSize')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('heightLimit')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('seed')"><span class="material-symbols-rounded">refresh</span></a>
+        </div>
     </div>
 </div>
+
+<script>
+    loadSettings();
+</script>
+
 </body>
 </html>

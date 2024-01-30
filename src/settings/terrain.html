@@ -47,11 +47,11 @@
     </div>
 
     <div id="values">
-        <input type="number" value="60" onchange="setValueById('mainNoiseSharpness', parseInt(document.getElementById('mainNoiseSharpness').value));" id="mainNoiseSharpness">
-        <input type="number" value="17" onchange="setValueById('mainNoiseScale', parseInt(document.getElementById('mainNoiseScale').value));" id="mainNoiseScale">
-        <input type="number" value="800" onchange="setValueById('biomeScale', parseInt(document.getElementById('biomeScale').value));" id="biomeScale">
-        <input type="number" value="400" onchange="setValueById('subbiomeScale', parseInt(document.getElementById('subbiomeScale').value));" id="subbiomeScale">
-        <input type="number" value="6" onchange="setValueById('terrainCollapseLimit', parseInt(document.getElementById('terrainCollapseLimit').value));" id="terrainCollapseLimit">
+        <input type="number" onchange="setValueById('mainNoiseSharpness', parseInt(document.getElementById('mainNoiseSharpness').value));" id="mainNoiseSharpness">
+        <input type="number" onchange="setValueById('mainNoiseScale', parseInt(document.getElementById('mainNoiseScale').value));" id="mainNoiseScale">
+        <input type="number" onchange="setValueById('biomeScale', parseInt(document.getElementById('biomeScale').value));" id="biomeScale">
+        <input type="number" onchange="setValueById('subbiomeScale', parseInt(document.getElementById('subbiomeScale').value));" id="subbiomeScale">
+        <input type="number" onchange="setValueById('terrainCollapseLimit', parseInt(document.getElementById('terrainCollapseLimit').value));" id="terrainCollapseLimit">
     </div>
 
     <div id="arrows">
@@ -86,7 +86,21 @@
             <a onclick="add('subbiomeScale', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
             <a onclick="add('terrainCollapseLimit', -10)"><span class="material-symbols-rounded">keyboard_double_arrow_down</span></a>
         </div>
+
+        <div id="reset">
+            <a onclick="reset('mainNoiseSharpness')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('mainNoiseScale')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('biomeScale')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('subbiomeScale')"><span class="material-symbols-rounded">refresh</span></a>
+            <a onclick="reset('terrainCollapseLimit')"><span class="material-symbols-rounded">refresh</span></a>
+        </div>
     </div>
 </div>
+
+<script>
+    loadSettings();
+</script>
+
+
 </body>
 </html>

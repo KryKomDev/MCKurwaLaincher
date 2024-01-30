@@ -1,25 +1,12 @@
 @use 'main';
 
-@mixin arrows {
-    position: absolute;
-    width: 20px;
-
-    a {
-        margin: 21px;
-
-        span {
-            margin-top: 21px;
-        }
-    }
-}
-
 #content {
     @include main.content;
     background-color: main.$background-light;
 
     padding-left: 30px;
 
-    #head {
+    h1 {
         padding-left: 30px;
         color: main.$highlight;
     }
@@ -30,7 +17,6 @@
 
     #labels {
         position: absolute;
-        height: 80%;
         width: 400px;
         cursor: default;
     }
@@ -39,7 +25,6 @@
         position: absolute;
         top: 145px;
         left: 450px;
-        height: 80%;
         width: 200px;
 
         input {
@@ -67,7 +52,7 @@
         user-select: none;
 
         #add {
-            @include arrows();
+            @include main.arrows();
             left: 650px;
 
             a {
@@ -76,27 +61,40 @@
         }
 
         #sub {
-            @include arrows();
-            left: 680px;
+            @include main.arrows();
+            left: 700px;
             a {
                 color: main.$sub-color;
             }
         }
 
         #add-2 {
-            @include arrows();
-            left: 750px;
+            @include main.arrows();
+            left: 800px;
             a {
                 color: main.$add-color;
             }
         }
 
         #sub-2 {
-            @include arrows();
-            left: 780px;
+            @include main.arrows();
+            left: 850px;
             a {
                 color: main.$sub-color;
             }
         }
+
+        #reset {
+            @include main.arrows();
+            left: 975px;
+            a {
+                color: main.$reset-color;
+            }
+        }
+    }
+
+    #subinfo {
+        @include main.small-text();
+        position: absolute;
     }
 }

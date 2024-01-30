@@ -5,9 +5,10 @@ $link-color: #ffd195;
 $font-color: #ddd;
 $add-color: rgb(120, 255, 120);
 $sub-color: #ff8484;
+$reset-color: #70f5ff;
 $subinfo-color: #999;
 
-@mixin content {
+@mixin content () {
     position: absolute;
     left: 211px;
     bottom: 0;
@@ -15,11 +16,38 @@ $subinfo-color: #999;
     top: 77px;
 }
 
+@mixin small-text () {
+    font-size: 80%;
+    color: $subinfo-color;
+}
+
+@mixin arrows {
+    position: absolute;
+    width: 20px;
+
+    a {
+        margin: 21px;
+
+        span {
+            margin-top: 21px;
+        }
+    }
+}
+
 body {
     font-family: "JetBrains Mono", serif;
     font-size: 150%;
     color: $font-color;
     background-color: $background;
+}
+
+body::-webkit-scrollbar {
+    background-color: $background;
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $highlight;
 }
 
 #side-panel {
@@ -50,7 +78,7 @@ body {
     top: 0;
     right: 0;
     left: 211px;
-    bottom: 835px;
+    bottom: 674px;
     display: flex;
     z-index: 100;
     background-color: $background;

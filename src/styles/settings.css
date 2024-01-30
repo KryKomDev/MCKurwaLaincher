@@ -5,6 +5,15 @@ body {
   background-color: #222;
 }
 
+body::-webkit-scrollbar {
+  background-color: #222;
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e68f42;
+}
+
 #side-panel {
   position: fixed;
   width: 211px;
@@ -29,7 +38,7 @@ body {
   top: 0;
   right: 0;
   left: 211px;
-  bottom: 835px;
+  bottom: 674px;
   display: flex;
   z-index: 100;
   background-color: #222;
@@ -64,7 +73,7 @@ body {
   background-color: #333;
   padding-left: 30px;
 }
-#content #head {
+#content h1 {
   padding-left: 30px;
   color: #e68f42;
 }
@@ -73,7 +82,6 @@ body {
 }
 #content #labels {
   position: absolute;
-  height: 80%;
   width: 400px;
   cursor: default;
 }
@@ -81,7 +89,6 @@ body {
   position: absolute;
   top: 145px;
   left: 450px;
-  height: 80%;
   width: 200px;
 }
 #content #values input {
@@ -123,7 +130,7 @@ body {
 #content #arrows #sub {
   position: absolute;
   width: 20px;
-  left: 680px;
+  left: 700px;
 }
 #content #arrows #sub a {
   margin: 21px;
@@ -137,7 +144,7 @@ body {
 #content #arrows #add-2 {
   position: absolute;
   width: 20px;
-  left: 750px;
+  left: 800px;
 }
 #content #arrows #add-2 a {
   margin: 21px;
@@ -151,7 +158,7 @@ body {
 #content #arrows #sub-2 {
   position: absolute;
   width: 20px;
-  left: 780px;
+  left: 850px;
 }
 #content #arrows #sub-2 a {
   margin: 21px;
@@ -161,4 +168,23 @@ body {
 }
 #content #arrows #sub-2 a {
   color: #ff8484;
+}
+#content #arrows #reset {
+  position: absolute;
+  width: 20px;
+  left: 975px;
+}
+#content #arrows #reset a {
+  margin: 21px;
+}
+#content #arrows #reset a span {
+  margin-top: 21px;
+}
+#content #arrows #reset a {
+  color: #70f5ff;
+}
+#content #subinfo {
+  font-size: 80%;
+  color: #999;
+  position: absolute;
 }/*# sourceMappingURL=settings.css.map */

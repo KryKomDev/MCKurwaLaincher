@@ -42,3 +42,20 @@ function setValueById (id, value) {
         }
     }
 }
+
+function reset (id) {
+    for (var i = 0; i < labels.length; i++) {
+        if (labels[i] == id) {
+            values[i] = defaults[i];
+            document.getElementById(id).value = defaults[i];
+        }
+    }
+}
+
+function loadSettings () {
+    for (var i = 0; i < defaults.length; i++) {
+        if (document.getElementById(labels[i]) != null) {
+            document.getElementById(labels[i]).value = values[i];
+        }
+    }
+}
